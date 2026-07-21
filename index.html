@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>틈새 개인정보처리방침 · Teumsae Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#150F11;
+    --surface:#1E1618;
+    --surface-2:#2C2124;
+    --outline:#4A3833;
+    --ink:#EDE4E2;
+    --ink-dim:#B6A6A2;
+    --coral:#FF6B4A;
+    --peach:#FFB694;
+    --on-coral:#3A1206;
+    --measure:60ch;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.75;
+    letter-spacing:-0.01em;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:clamp(2.5rem,7vw,5.5rem) clamp(1.25rem,5vw,2rem) 6rem;}
+
+  /* ---- masthead ---- */
+  .mast{margin-bottom:3.5rem;}
+  .wordmark{
+    font-family:"Instrument Serif",Georgia,serif;
+    font-weight:400;
+    font-size:clamp(2.75rem,9vw,4rem);
+    line-height:1.05;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  .wordmark em{font-style:italic;color:var(--coral);}
+  .mast .kicker{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin:0 0 1.1rem;
+  }
+  .mast .dates{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;
+    color:var(--ink-dim);
+    margin:1.4rem 0 0;
+  }
+
+  /* ---- language switch ---- */
+  .langs{display:flex;gap:.35rem;margin-top:1.6rem;}
+  .langs button{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.75rem;
+    letter-spacing:.08em;
+    color:var(--ink-dim);
+    background:transparent;
+    border:1px solid var(--outline);
+    border-radius:999px;
+    padding:.32rem .85rem;
+    cursor:pointer;
+    transition:color .15s,border-color .15s,background .15s;
+  }
+  .langs button:hover{color:var(--ink);border-color:var(--ink-dim);}
+  .langs button[aria-pressed="true"]{
+    background:var(--coral);
+    border-color:var(--coral);
+    color:var(--on-coral);
+    font-weight:500;
+  }
+  .langs button:focus-visible,a:focus-visible{outline:2px solid var(--peach);outline-offset:3px;}
+
+  /* ---- lede ---- */
+  .lede{
+    font-size:1.15rem;
+    line-height:1.65;
+    color:var(--ink);
+    border-left:2px solid var(--coral);
+    padding-left:1.15rem;
+    margin:0 0 3.5rem;
+    max-width:var(--measure);
+  }
+
+  /* ---- sections ---- */
+  section{margin:0 0 3rem;max-width:var(--measure);}
+  h2{
+    font-family:"IBM Plex Sans KR",sans-serif;
+    font-weight:600;
+    font-size:1.02rem;
+    letter-spacing:.01em;
+    margin:0 0 .85rem;
+  }
+  p{margin:0 0 1rem;color:var(--ink-dim);}
+  p strong{color:var(--ink);font-weight:500;}
+  ul{margin:0 0 1rem;padding-left:1.1rem;color:var(--ink-dim);}
+  li{margin-bottom:.45rem;}
+  li::marker{color:var(--outline);}
+  a{color:var(--peach);text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px;}
+  a:hover{color:var(--coral);}
+
+  /* ---- signature: the data ledger ---- */
+  .ledger{
+    background:var(--surface);
+    border:1px solid var(--outline);
+    border-radius:10px;
+    overflow:hidden;
+    margin:1.4rem 0 1.2rem;
+  }
+  .ledger-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:.75rem 1rem;
+    align-items:baseline;
+    padding:.95rem 1.1rem;
+    border-bottom:1px solid var(--surface-2);
+  }
+  .ledger-row:last-child{border-bottom:0;}
+  .ledger-row .what{color:var(--ink);font-weight:400;font-size:.95rem;}
+  .ledger-row .note{
+    grid-column:1 / -1;
+    font-size:.85rem;
+    line-height:1.6;
+    color:var(--ink-dim);
+    margin-top:-.15rem;
+  }
+  .tag{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.68rem;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    white-space:nowrap;
+    padding:.22rem .6rem;
+    border-radius:999px;
+    border:1px solid var(--outline);
+    color:var(--ink-dim);
+  }
+  .tag.leaves{
+    background:var(--coral);
+    border-color:var(--coral);
+    color:var(--on-coral);
+    font-weight:500;
+  }
+  .legend{
+    font-size:.85rem;
+    color:var(--ink-dim);
+    display:flex;
+    gap:.5rem;
+    align-items:flex-start;
+    line-height:1.6;
+  }
+  .legend .tag{flex:none;margin-top:.15rem;}
+
+  /* ---- contact ---- */
+  .contact{
+    background:var(--surface);
+    border:1px solid var(--outline);
+    border-radius:10px;
+    padding:1.4rem 1.3rem;
+    margin-top:3.5rem;
+    max-width:var(--measure);
+  }
+  .contact h2{margin-bottom:.5rem;}
+  .contact p{margin-bottom:0;}
+
+  footer{
+    margin-top:3rem;
+    padding-top:1.5rem;
+    border-top:1px solid var(--surface-2);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.05em;
+    color:var(--outline);
+    max-width:var(--measure);
+  }
+
+  [data-lang]{display:none;}
+  [data-lang].on{display:block;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <p class="kicker">Privacy Policy · 개인정보처리방침</p>
+    <h1 class="wordmark">틈새 <em>Teumsae</em></h1>
+    <p class="dates">시행일 EFFECTIVE 2026-07-21 · 최종 수정 UPDATED 2026-07-21</p>
+    <div class="langs" role="group" aria-label="언어 선택 / Language">
+      <button type="button" data-set="ko" aria-pressed="true">한국어</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <!-- =============== KOREAN =============== -->
+  <div data-lang="ko" class="on">
+
+    <p class="lede">틈새는 계정이 없습니다. 회원가입도, 로그인도 없습니다. 저장한 링크와 목록은 기기 안에만 남고, 개발자는 그 내용을 볼 수 없습니다.</p>
+
+    <section>
+      <h2>저장되는 정보와 그 위치</h2>
+      <div class="ledger">
+        <div class="ledger-row">
+          <span class="what">저장한 링크(URL)</span>
+          <span class="tag">기기 내부</span>
+          <span class="note">공유하기로 보낸 주소, 저장 시각, 읽음 여부, 즐겨찾기 표시가 기기의 앱 전용 데이터베이스에 저장됩니다.</span>
+        </div>
+        <div class="ledger-row">
+          <span class="what">링크 미리보기 정보</span>
+          <span class="tag">기기 내부</span>
+          <span class="note">제목, 썸네일 주소, 작성자, 영상 길이, 요약문. 해당 웹페이지가 공개한 정보를 받아 기기에 저장합니다.</span>
+        </div>
+        <div class="ledger-row">
+          <span class="what">앱 설정</span>
+          <span class="tag">기기 내부</span>
+          <span class="note">언어 설정, 자동 백업 사용 여부, 백업 폴더 위치.</span>
+        </div>
+        <div class="ledger-row">
+          <span class="what">미리보기를 받기 위한 요청</span>
+          <span class="tag leaves">외부 전송</span>
+          <span class="note">제목과 썸네일을 가져오려면 저장한 주소를 해당 사이트로 보내야 합니다. 아래 &lsquo;외부로 나가는 정보&rsquo;에서 자세히 설명합니다.</span>
+        </div>
+      </div>
+      <p class="legend"><span class="tag leaves">외부 전송</span><span>표시가 붙은 항목만 기기 밖으로 나갑니다. 나머지는 기기를 떠나지 않습니다.</span></p>
+      <p>틈새는 이름, 이메일, 전화번호, 연락처, 위치, 사진, 기기 식별자를 수집하지 않습니다. 광고와 분석 도구도 넣지 않았습니다.</p>
+    </section>
+
+    <section>
+      <h2>외부로 나가는 정보</h2>
+      <p>링크를 저장하면 제목과 썸네일을 가져오기 위해 <strong>저장한 주소 자체를</strong> 아래로 보냅니다. 이때 나가는 것은 주소뿐이며, 이름이나 기기 정보는 함께 보내지 않습니다.</p>
+      <ul>
+        <li><strong>저장한 링크의 원본 사이트</strong> — 페이지의 공개 미리보기 정보(제목, 설명, 대표 이미지)를 읽어옵니다.</li>
+        <li><strong>Google / YouTube</strong> — 유튜브 링크일 때 영상 제목, 채널명, 재생시간을 조회합니다. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
+        <li><strong>Meta</strong> — 인스타그램·스레드 링크일 때 공개 게시물 미리보기를 조회합니다. <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Meta 개인정보처리방침</a></li>
+      </ul>
+      <p>이 요청은 위 서비스들의 서버에 기록될 수 있고, 그 기록은 각 회사의 방침을 따릅니다. 개발자는 이 요청을 중계하지 않고, 별도의 서버를 운영하지 않으며, 저장한 링크 목록을 전송받지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>사용하는 권한</h2>
+      <ul>
+        <li><strong>인터넷 / 네트워크 상태</strong> — 링크 미리보기를 가져오고, 연결이 끊겼을 때 다시 시도하기 위해 사용합니다.</li>
+        <li><strong>폴더 선택</strong> — 백업 파일을 저장할 폴더를 직접 고를 때만 사용합니다. 선택한 폴더 외의 파일에는 접근하지 않습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>백업</h2>
+      <p>설정에서 백업을 실행하면 저장 목록이 파일로 만들어져 직접 고른 폴더에 저장됩니다. 이 파일은 기기 또는 사용자의 클라우드 드라이브에 남으며, 개발자에게 전송되지 않습니다. 백업 파일의 관리와 공유는 사용자의 몫입니다.</p>
+      <p>기기 설정에서 Android 자동 백업을 켜둔 경우, 앱 데이터가 Google 계정에 백업될 수 있습니다. 이는 Android의 기능이며 <a href="https://support.google.com/android/answer/2819582" target="_blank" rel="noopener">기기 설정</a>에서 끌 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2>보관과 삭제</h2>
+      <p>데이터는 기기 안에만 있으므로, 삭제도 기기에서 이루어집니다. 항목을 개별 삭제하거나, 앱을 삭제하면 저장된 모든 데이터가 함께 지워집니다. 직접 만든 백업 파일은 따로 지워야 합니다.</p>
+      <p>개발자가 보관하는 사용자 데이터가 없으므로, 삭제를 요청할 대상도 없습니다.</p>
+    </section>
+
+    <section>
+      <h2>아동</h2>
+      <p>틈새는 아동을 대상으로 만들어지지 않았고, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>방침 변경</h2>
+      <p>내용이 바뀌면 이 페이지를 갱신하고 상단의 시행일을 고칩니다. 중요한 변경은 앱 업데이트 설명에 함께 적습니다.</p>
+    </section>
+
+    <div class="contact">
+      <h2>문의</h2>
+      <p>이 방침이나 앱에 대한 질문은 <a href="mailto:io.jhstudio@gmail.com">io.jhstudio@gmail.com</a> 으로 보내주세요.</p>
+    </div>
+
+  </div>
+
+  <!-- =============== ENGLISH =============== -->
+  <div data-lang="en">
+
+    <p class="lede">Teumsae has no accounts. No sign-up, no login. The links you save stay on your device, and the developer cannot see them.</p>
+
+    <section>
+      <h2>What is stored, and where</h2>
+      <div class="ledger">
+        <div class="ledger-row">
+          <span class="what">Saved links</span>
+          <span class="tag">On device</span>
+          <span class="note">The URL you shared, when you saved it, whether you've read it, and whether you favorited it — kept in the app's private database.</span>
+        </div>
+        <div class="ledger-row">
+          <span class="what">Link previews</span>
+          <span class="tag">On device</span>
+          <span class="note">Title, thumbnail address, author, video length, summary text — taken from what the page publishes, stored on your device.</span>
+        </div>
+        <div class="ledger-row">
+          <span class="what">App settings</span>
+          <span class="tag">On device</span>
+          <span class="note">Language, auto-backup on or off, and the backup folder you chose.</span>
+        </div>
+        <div class="ledger-row">
+          <span class="what">Preview requests</span>
+          <span class="tag leaves">Leaves device</span>
+          <span class="note">Fetching a title or thumbnail means sending the saved address to that site. Details below.</span>
+        </div>
+      </div>
+      <p class="legend"><span class="tag leaves">Leaves device</span><span>Only items marked this way go outside your device. Everything else stays on it.</span></p>
+      <p>Teumsae does not collect your name, email, phone number, contacts, location, photos, or device identifiers. There are no ads and no analytics.</p>
+    </section>
+
+    <section>
+      <h2>What leaves your device</h2>
+      <p>When you save a link, the app sends <strong>that address</strong> to the following in order to fetch a title and thumbnail. Only the address is sent — no name, no device information.</p>
+      <ul>
+        <li><strong>The linked site itself</strong> — to read the page's public preview data (title, description, cover image).</li>
+        <li><strong>Google / YouTube</strong> — for YouTube links, to look up the video title, channel, and duration. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><strong>Meta</strong> — for Instagram and Threads links, to look up the public post preview. <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Meta Privacy Policy</a></li>
+      </ul>
+      <p>Those services may log these requests under their own policies. The developer does not relay these requests, runs no server, and never receives your list of saved links.</p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <ul>
+        <li><strong>Internet and network state</strong> — to fetch link previews and retry when the connection drops.</li>
+        <li><strong>Folder access</strong> — used only when you pick a folder for backup files. The app does not reach outside the folder you chose.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Backups</h2>
+      <p>Running a backup writes your saved list to a file in the folder you picked. That file stays on your device or in your own cloud drive and is never sent to the developer. Managing and sharing that file is up to you.</p>
+      <p>If Android's automatic backup is on in your device settings, app data may be backed up to your Google account. That is an Android feature and you can turn it off in <a href="https://support.google.com/android/answer/2819582" target="_blank" rel="noopener">your device settings</a>.</p>
+    </section>
+
+    <section>
+      <h2>Keeping and deleting data</h2>
+      <p>Because the data lives on your device, you delete it there. Remove items one by one, or uninstall the app to erase everything it stored. Backup files you created must be deleted separately.</p>
+      <p>The developer holds no user data, so there is nothing to request deletion of.</p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>Teumsae is not directed at children and does not knowingly collect personal information from them.</p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>If this policy changes, this page is updated and the effective date at the top is revised. Significant changes are noted in the app's release notes.</p>
+    </section>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Questions about this policy or the app: <a href="mailto:io.jhstudio@gmail.com">io.jhstudio@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <footer>Teumsae · 틈새</footer>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll('.langs button');
+  var panels = document.querySelectorAll('[data-lang]');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.getAttribute('data-set');
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle('on', p.getAttribute('data-lang') === target);
+      });
+      document.documentElement.lang = target;
+    });
+  });
+</script>
+</body>
+</html>
